@@ -1,4 +1,5 @@
 import React from 'react';
+import Clinicians from './components/Clinicians';
 import Header from './components/Header';
 import useFetch from './utilities/useFetch';
 
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      {!loading && <Clinicians data={userData?.data.result} />}
     </div>
   );
 }
