@@ -1,11 +1,12 @@
 import React from 'react';
-import SearchBar from './components/SearchBar';
+import Header from './components/Header';
+import useFetch from './utilities/useFetch';
 
 function App() {
+  const { loading, userData, setUserData } = useFetch('Clinicians.json');
   return (
     <div className="App">
-      <h1 className="text-center">Clinician Administration Page</h1>
-      <SearchBar />
+      <Header />
     </div>
   );
 }
