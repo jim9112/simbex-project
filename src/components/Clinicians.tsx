@@ -13,9 +13,11 @@ interface ComponentProps {
 }
 
 const Clinicians = ({ data }: ComponentProps) => {
+  // sort data (clinician list) by last name
   const sortedData = data?.sort((a, b) =>
     a.last_name.localeCompare(b.last_name)
   );
+
   return (
     <div>
       {data &&
