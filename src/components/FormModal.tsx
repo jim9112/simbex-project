@@ -17,7 +17,9 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               className="border-b border-black"
               type="text"
               id="firstName"
-              name="firstName"
+              name="first_name"
+              value={inputs.first_name ? inputs.first_name : ''}
+              onChange={handleChange}
               required
             />
           </label>
@@ -27,7 +29,9 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               className="border-b border-black"
               type="text"
               id="lastName"
-              name="lastName"
+              name="last_name"
+              value={inputs.last_name ? inputs.last_name : ''}
+              onChange={handleChange}
               required
             />
           </label>
@@ -38,6 +42,8 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               type="email"
               id="email"
               name="email"
+              value={inputs.email ? inputs.email : ''}
+              onChange={handleChange}
               required
             />
           </label>
@@ -47,7 +53,9 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               className="border-b border-black"
               type="text"
               id="clinic"
-              name="clinic"
+              name="clinic_name"
+              value={inputs.clinic_name ? inputs.clinic_name : ''}
+              onChange={handleChange}
               required
             />
           </label>
@@ -58,6 +66,8 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               type="text"
               id="address1"
               name="address1"
+              value={inputs.address1 ? inputs.address1 : ''}
+              onChange={handleChange}
               required
             />
           </label>
@@ -68,6 +78,8 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               type="text"
               id="address2"
               name="address2"
+              value={inputs.address2 ? inputs.address2 : ''}
+              onChange={handleChange}
             />
           </label>
           <label htmlFor="city">
@@ -77,6 +89,8 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               type="text"
               id="city"
               name="city"
+              value={inputs.city ? inputs.city : ''}
+              onChange={handleChange}
               required
             />
           </label>
@@ -87,6 +101,8 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               type="text"
               id="state"
               name="state"
+              value={inputs.state ? inputs.state : ''}
+              onChange={handleChange}
               required
             />
           </label>
@@ -97,6 +113,8 @@ const FormModal = ({ setModalOpen }: ComponentProps) => {
               type="text"
               id="zip"
               name="zip"
+              value={inputs.zip ? inputs.zip : ''}
+              onChange={handleChange}
               required
             />
           </label>
