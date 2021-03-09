@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <Header userSearch={userSearch} setUserSearch={setUserSearch} />
-      {!loading && <Clinicians data={userData?.data.result} />}
+      {!loading && (
+        <Clinicians data={userData?.data.result} userSearch={userSearch} />
+      )}
     </div>
   );
 }

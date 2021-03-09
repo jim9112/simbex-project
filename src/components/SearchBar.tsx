@@ -10,7 +10,7 @@ const SearchBar = ({ userSearch, setUserSearch }: ComponentProps) => {
         type="text"
         placeholder="search"
         value={userSearch}
-        onChange={(e) => setUserSearch(e.target.value)}
+        onChange={(e) => setUserSearch(e.target.value.toLowerCase())}
       />
     </div>
   );
