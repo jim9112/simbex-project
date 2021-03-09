@@ -1,9 +1,17 @@
 interface ComponentProps {
-  record: {};
+  record: {
+    last_name: string;
+    first_name: string;
+  };
 }
 
 const Clinician = ({ record }: ComponentProps) => {
-  return <p>individual clinician</p>;
+  console.log(record);
+  return (
+    <h1>
+      {record.last_name}, {record.first_name}
+    </h1>
+  );
 };
 
 export default Clinician;

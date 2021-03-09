@@ -5,18 +5,21 @@ interface ComponentProps {
     | [
         record: {
           id: string;
+          last_name: string;
+          first_name: string;
         }
       ]
     | null;
 }
 
 const Clinicians = ({ data }: ComponentProps) => {
-  console.log(data);
-
+  const sortedData = data?.sort((a, b) =>
+    a.last_name.localeCompare(b.last_name)
+  );
   return (
     <div>
       {data &&
-        data.map((record) => {
+        sortedData?.map((record) => {
           return <Clinician key={record.id} record={record} />;
         })}
     </div>
