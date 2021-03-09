@@ -7,9 +7,14 @@ interface ComponentProps {
 
 const Header = ({ userSearch, setUserSearch }: ComponentProps) => {
   return (
-    <header className="App">
-      <h1 className="text-center">Clinician Administration Page</h1>
+    <header className="relative">
+      <h1 className="text-center text-3xl mb-4 mt-4">
+        Clinician Administration Page
+      </h1>
       <SearchBar userSearch={userSearch} setUserSearch={setUserSearch} />
+      <button className="text-xl border-b" type="button">
+        Add Record
+      </button>
     </header>
   );
 };
