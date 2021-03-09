@@ -1,5 +1,13 @@
+import Clinician from './Clinician';
+
 interface ComponentProps {
-  data?: {} | null;
+  data?:
+    | [
+        record: {
+          id: string;
+        }
+      ]
+    | null;
 }
 
 const Clinicians = ({ data }: ComponentProps) => {
@@ -7,7 +15,10 @@ const Clinicians = ({ data }: ComponentProps) => {
 
   return (
     <div>
-      <p>clinicians</p>
+      {data &&
+        data.map((record) => {
+          return <Clinician key={record.id} record={record} />;
+        })}
     </div>
   );
 };
