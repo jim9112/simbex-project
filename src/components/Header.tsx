@@ -14,7 +14,7 @@ const Header = ({
   setModalOpen,
 }: ComponentProps) => {
   return (
-    <header className="relative">
+    <header className="relative border-b border-black">
       <h1 className="text-center text-3xl mb-4 mt-4">
         Clinician Administration Page
       </h1>

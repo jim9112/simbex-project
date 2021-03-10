@@ -12,7 +12,7 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
   return (
     <div className="absolute pt-5 top-0 bg-black bg-opacity-80 w-full h-full z-10">
       <form
-        className="bg-white w-max m-auto p-4"
+        className="bg-white w-max m-auto p-4 rounded-sm"
         onSubmit={(e) => {
           e.preventDefault();
           const newUserData = userData;
@@ -23,11 +23,11 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
           setModalOpen(false);
         }}>
         <h1 className="text-center">Add New Clinician</h1>
-        <div className="grid sm:grid-cols-2">
-          <label htmlFor="firstName">
+        <div className="grid sm:grid-cols-2 gap-2">
+          <label htmlFor="firstName" className="relative">
             First Name
             <input
-              className="border-b border-black"
+              className="border-b border-black relative right-0"
               type="text"
               id="firstName"
               name="first_name"
@@ -36,10 +36,10 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               required
             />
           </label>
-          <label htmlFor="lastName">
+          <label htmlFor="lastName" className="relative">
             Last Name
             <input
-              className="border-b border-black"
+              className="border-b border-black relative right-0"
               type="text"
               id="lastName"
               name="last_name"
@@ -48,10 +48,10 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               required
             />
           </label>
-          <label htmlFor="email">
+          <label htmlFor="email" className="relative">
             Email
             <input
-              className="border-b border-black"
+              className="border-b border-black absolute right-0"
               type="email"
               id="email"
               name="email"
@@ -60,10 +60,10 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               required
             />
           </label>
-          <label htmlFor="clinic">
+          <label htmlFor="clinic" className="relative">
             Clinic
             <input
-              className="border-b border-black"
+              className="border-b border-black absolute right-0"
               type="text"
               id="clinic"
               name="clinic_name"
@@ -72,10 +72,10 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               required
             />
           </label>
-          <label htmlFor="address1">
+          <label htmlFor="address1" className="relative">
             Address 1
             <input
-              className="border-b border-black"
+              className="border-b border-black absolute right-0"
               type="text"
               id="address1"
               name="address1"
@@ -84,10 +84,10 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               required
             />
           </label>
-          <label htmlFor="address2">
+          <label htmlFor="address2" className="relative">
             Address 2
             <input
-              className="border-b border-black"
+              className="border-b border-black absolute right-0"
               type="text"
               id="address2"
               name="address2"
@@ -95,10 +95,10 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="city">
+          <label htmlFor="city" className="relative">
             City
             <input
-              className="border-b border-black"
+              className="border-b border-black absolute right-0"
               type="text"
               id="city"
               name="city"
@@ -107,10 +107,10 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               required
             />
           </label>
-          <label htmlFor="State">
+          <label htmlFor="State" className="relative">
             State
             <input
-              className="border-b border-black"
+              className="border-b border-black absolute right-0"
               type="text"
               id="state"
               name="state"
@@ -119,10 +119,10 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               required
             />
           </label>
-          <label htmlFor="zip">
+          <label htmlFor="zip" className="relative">
             Zipcode
             <input
-              className="border-b border-black"
+              className="border-b border-black absolute right-0"
               type="text"
               id="zip"
               name="zip"
@@ -132,11 +132,16 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
             />
           </label>
         </div>
-        <div>
-          <button type="button" onClick={() => setModalOpen(false)}>
+        <div className="mt-4 grid grid-flow-col gap-4">
+          <button
+            className="border-black border rounded-xl p-1"
+            type="button"
+            onClick={() => setModalOpen(false)}>
             Cancel
           </button>{' '}
-          <button type="submit">Submit</button>
+          <button className="border-black border rounded-xl p-1" type="submit">
+            Submit
+          </button>
         </div>
       </form>
     </div>
