@@ -11,7 +11,13 @@ function App() {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   return (
     <div className="App font-sans relative">
-      {modalOpen && <FormModal setModalOpen={setModalOpen} />}
+      {modalOpen && (
+        <FormModal
+          setModalOpen={setModalOpen}
+          userData={userData}
+          setUserData={setUserData}
+        />
+      )}
       <Header
         userSearch={userSearch}
         setUserSearch={setUserSearch}

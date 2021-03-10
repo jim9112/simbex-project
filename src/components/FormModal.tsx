@@ -2,13 +2,23 @@ import useForm from '../utilities/useForm';
 
 interface ComponentProps {
   setModalOpen: Function;
+  userData: { data: any } | null;
+  setUserData: Function;
 }
 
-const FormModal = ({ setModalOpen }: ComponentProps) => {
+const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
   const { inputs, handleChange } = useForm();
   return (
     <div className="absolute pt-5 top-0 bg-black bg-opacity-80 w-full h-full z-10">
-      <form className="bg-white w-max m-auto p-4">
+      <form
+        className="bg-white w-max m-auto p-4"
+        onSubmit={(e) => {
+          e.preventDefault();
+          const newUserData = userData;
+          newUserData?.data.result.push(inputs);
+          setUserData(newUserData);
+          setModalOpen(false);
+        }}>
         <h1 className="text-center">Add New Clinician</h1>
         <div className="grid sm:grid-cols-2">
           <label htmlFor="firstName">
