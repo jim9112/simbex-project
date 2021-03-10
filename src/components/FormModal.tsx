@@ -8,6 +8,7 @@ interface ComponentProps {
 
 const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
   const { inputs, handleChange } = useForm();
+  //  add id to new record and surface onSubmit
   return (
     <div className="absolute pt-5 top-0 bg-black bg-opacity-80 w-full h-full z-10">
       <form
