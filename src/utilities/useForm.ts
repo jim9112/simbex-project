@@ -10,6 +10,7 @@ interface FormState {
   city?: string;
   state?: string;
   zip?: string;
+  id?: number;
 }
 
 const useForm = () => {

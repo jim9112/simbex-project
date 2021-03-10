@@ -16,7 +16,9 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
         onSubmit={(e) => {
           e.preventDefault();
           const newUserData = userData;
-          newUserData?.data.result.push(inputs);
+          const userInputs = inputs;
+          inputs.id = Date.now();
+          newUserData?.data.result.push(userInputs);
           setUserData(newUserData);
           setModalOpen(false);
         }}>
