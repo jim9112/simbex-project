@@ -19,8 +19,8 @@ const Clinician = ({ record }: ComponentProps) => {
       <header className="text-2xl mb-3">
         {record.last_name}, {record.first_name}
       </header>
-      <div className="pl-3 sm:grid sm:grid-cols-2 sm:justify-items-start">
-        <div>
+      <div className="pl-3 sm:flex">
+        <div className="sm:w-96">
           <p>
             {' '}
             <span className="text-indigo-900">Email:</span>{' '}
