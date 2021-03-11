@@ -18,13 +18,15 @@ const Header = ({
       <h1 className="text-center text-3xl mb-4 mt-4">
         Clinician Administration Page
       </h1>
-      <SearchBar userSearch={userSearch} setUserSearch={setUserSearch} />
-      <button
-        className="text-xl border-b"
-        type="button"
-        onClick={() => setModalOpen(true)}>
-        Add Record
-      </button>
+      <div className="grid sm:grid-flow-col mb-3 sm:gap-16 sm:px-3">
+        <SearchBar userSearch={userSearch} setUserSearch={setUserSearch} />
+        <button
+          className="text-xl border-black border rounded-xl p-1 mt-3 m-3 sm:m-0"
+          type="button"
+          onClick={() => setModalOpen(true)}>
+          Add Record
+        </button>
+      </div>
     </header>
   );
 };

@@ -14,7 +14,7 @@ interface ComponentProps {
 const Clinician = ({ record }: ComponentProps) => {
   console.log(record);
   return (
-    <div>
+    <div className="p-3">
       <header className="text-2xl">
         {record.last_name}, {record.first_name}
       </header>

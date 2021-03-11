@@ -6,7 +6,7 @@ interface ComponentProps {
 const SearchBar = ({ userSearch, setUserSearch }: ComponentProps) => {
   return (
     <input
-      className="w-full border-b text-xl"
+      className="w-full border-b text-xl pl-3"
       type="text"
       placeholder="Search by Last Name"
       value={userSearch}
