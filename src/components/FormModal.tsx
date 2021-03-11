@@ -33,6 +33,7 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               name="first_name"
               value={inputs.first_name ? inputs.first_name : ''}
               onChange={handleChange}
+              autoCapitalize="words"
               required
             />
           </label>
@@ -45,6 +46,7 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               name="last_name"
               value={inputs.last_name ? inputs.last_name : ''}
               onChange={handleChange}
+              autoCapitalize="words"
               required
             />
           </label>
@@ -80,6 +82,8 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               name="address1"
               value={inputs.address1 ? inputs.address1 : ''}
               onChange={handleChange}
+              autoComplete="address-line1"
+              autoCapitalize="words"
               required
             />
           </label>
@@ -91,6 +95,8 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               id="address2"
               name="address2"
               value={inputs.address2 ? inputs.address2 : ''}
+              autoComplete="address-line2"
+              autoCapitalize="words"
               onChange={handleChange}
             />
           </label>
@@ -103,6 +109,7 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               name="city"
               value={inputs.city ? inputs.city : ''}
               onChange={handleChange}
+              autoCapitalize="words"
               required
             />
           </label>
@@ -115,6 +122,8 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               name="id_state"
               value={inputs.id_state ? inputs.id_state : ''}
               onChange={handleChange}
+              maxLength={2}
+              autoCapitalize="characters"
               required
             />
           </label>
@@ -127,6 +136,8 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               name="zip"
               value={inputs.zip ? inputs.zip : ''}
               onChange={handleChange}
+              autoComplete="postal-code"
+              maxLength={20}
               required
             />
           </label>
