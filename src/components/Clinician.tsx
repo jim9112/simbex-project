@@ -17,7 +17,9 @@ const Clinician = ({ record }: ComponentProps) => {
   return (
     <div className="p-3">
       <header className="text-2xl mb-3">
-        {record.last_name}, {record.first_name}
+        {record.last_name[0].toUpperCase()}
+        {record.last_name.substring(1)}, {record.first_name[0].toUpperCase()}
+        {record.first_name.substring(1)}
       </header>
       <div className="pl-3 sm:flex">
         <div className="sm:w-96">
@@ -29,7 +31,10 @@ const Clinician = ({ record }: ComponentProps) => {
           {record.clinic_name && (
             <p className="text-indigo-900">
               Clinic Name:{' '}
-              <span className="text-gray-500">{record.clinic_name}</span>{' '}
+              <span className="text-gray-500">
+                {record.clinic_name[0].toUpperCase()}
+                {record.clinic_name.substring(1)}
+              </span>{' '}
             </p>
           )}
         </div>
@@ -43,7 +48,9 @@ const Clinician = ({ record }: ComponentProps) => {
               )}
             </p>
             <p>
-              {record.city}, {record.id_state.toUpperCase()} {record.zip}
+              {record.city[0].toUpperCase()}
+              {record.city.substring(1)}, {record.id_state.toUpperCase()}{' '}
+              {record.zip}
             </p>
           </div>
         </div>

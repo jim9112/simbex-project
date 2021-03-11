@@ -123,7 +123,7 @@
         "id_state": "NH",
         "id_country": 1,
         "npi": "1122444444",
-        "clinic_name": "c",
+        "clinic_name": "cclinic",
         "id_clinician_credential": null,
         "clinician_credential_text": null
       },
@@ -148,7 +148,7 @@
         "id_state": "AZ",
         "id_country": 1,
         "npi": "1234567890",
-        "clinic_name": "d",
+        "clinic_name": "dclinic",
         "id_clinician_credential": null,
         "clinician_credential_text": null
       },
@@ -173,7 +173,7 @@
         "id_state": "NH",
         "id_country": 1,
         "npi": "1223456777",
-        "clinic_name": "e",
+        "clinic_name": "eclinic",
         "id_clinician_credential": null,
         "clinician_credential_text": null
       },
@@ -198,7 +198,7 @@
         "id_state": "FL",
         "id_country": 1,
         "npi": "1213123123",
-        "clinic_name": "f",
+        "clinic_name": "fclinic",
         "id_clinician_credential": null,
         "clinician_credential_text": null
       },
