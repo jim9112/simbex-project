@@ -13,7 +13,6 @@ interface ComponentProps {
 }
 
 const Clinician = ({ record }: ComponentProps) => {
-  console.log(record);
   return (
     <div className="p-3">
       <header className="text-2xl mb-3">

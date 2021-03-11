@@ -32,8 +32,6 @@ const Clinicians = ({ data, userSearch, loading }: ComponentProps) => {
     return <h1>Loading....</h1>;
   }
 
-  // to do: ad in error component option
-
   // main component return
   return (
     <div className="divide-y-2">
