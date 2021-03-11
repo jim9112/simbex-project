@@ -8,7 +8,7 @@ interface FormState {
   address1?: string;
   address2?: string;
   city?: string;
-  state?: string;
+  id_state?: string;
   zip?: string;
   id?: number;
 }

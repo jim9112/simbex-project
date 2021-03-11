@@ -69,7 +69,6 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               name="clinic_name"
               value={inputs.clinic_name ? inputs.clinic_name : ''}
               onChange={handleChange}
-              required
             />
           </label>
           <label htmlFor="address1" className="relative">
@@ -113,8 +112,8 @@ const FormModal = ({ setModalOpen, userData, setUserData }: ComponentProps) => {
               className="border-b border-black absolute right-0"
               type="text"
               id="state"
-              name="state"
-              value={inputs.state ? inputs.state : ''}
+              name="id_state"
+              value={inputs.id_state ? inputs.id_state : ''}
               onChange={handleChange}
               required
             />

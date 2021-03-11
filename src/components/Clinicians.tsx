@@ -15,6 +15,7 @@ interface ComponentProps {
           address2: string;
           city: string;
           zip: string;
+          id_state: string;
         }
       ]
     | null;
